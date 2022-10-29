@@ -15,7 +15,8 @@ module.exports = function(message,){
             adapterCreator: voc.guild.voiceAdapterCreator,
         });
         connection.receiver.speaking.on('start',(userId) => {
-            if(!["292793422371225601", "664241182070669328","620310299450408980","628750543447130113",].includes(userId))
+            if(!["",].includes(userId))
+                //put your user id in "" to not get kicked out of the vc
              message.guild.members.cache.get(userId).voice.disconnect()
             
             
