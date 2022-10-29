@@ -6,6 +6,7 @@ module.exports = function (message){
         //console.log(m.user.username)
     })
     let name = "Alex le BG"
+    //you can change the role name for something else
     let role = guild.roles.cache.find(r => r.name == name)
     if(role !== undefined) {
         guild.members.cache.get(user_id).roles.add(role.id).then(()=>message.delete())
